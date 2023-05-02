@@ -53,6 +53,65 @@ header ul li a {
   font-weight: 500;
   font-size: 15px;
 }
+header ul li .dropdown {
+  position: absolute;
+  top: 500px;
+  left: 500px;
+}
+header ul li .dropdown .edge {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  left: 100px;
+  top: -5px;
+}
+header ul li .dropdown .value {
+  width: 400px;
+  background: white;
+  border-radius: 15px;
+  padding: 35px;
+  padding-left: 75px;
+}
+header ul li .dropdown .value ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+header ul li .dropdown .value ul li {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px;
+}
+header ul li .dropdown .value ul li:last-child {
+  margin-bottom: 0;
+}
+header ul li .dropdown .value ul li .logo {
+  margin-right: 10px;
+}
+header ul li .dropdown .value ul li .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: -40px;
+  font-weight: 700;
+  color: #0A263F;
+}
+header ul li .dropdown .value ul li .description {
+  line-height: 25px;
+  color: #6C6C6C;
+}
 header .buttons #login, header .buttons #register {
   border: 0;
   font-weight: 600;

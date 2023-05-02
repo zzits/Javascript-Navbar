@@ -37,6 +37,55 @@ header{
                 font-weight: 500;
                 font-size: 15px;
             }
+            .dropdown{
+                position: absolute;
+                top: 500px;
+                left: 500px;
+                .edge{
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    background-color: white;
+                    transform: rotate(45deg);
+                    left: 100px;
+                    top: -5px
+                }
+                .value{
+                    width: 400px;
+                    background: white;
+                    border-radius: 15px;
+                    padding: 35px;
+                    padding-left: 75px;
+                    ul{
+                        display: flex;
+                        flex-direction: column;
+                        li{
+                            margin: 0;
+                            display: flex;
+                            margin-bottom: 15px;
+                            &:last-child{
+                                margin-bottom: 0;
+                            }
+                            .logo{
+                                margin-right: 10px;
+                                
+                            }
+                            .header{
+                                display: flex;
+                                align-items: center;
+                                margin-left: -40px;
+                                font-weight: 700;
+                                color:$text-blue;
+                            }
+                            .description{
+                                line-height: 25px;
+                                color: $text-grey;
+                            }
+                            
+                        }
+                    }
+                }
+            }
         }
     }
     .buttons{
