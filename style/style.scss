@@ -35,6 +35,7 @@ header{
             #dropdown:checked~.dropdown {
                 opacity: 1;
                 transform: translateY(0);
+                z-index: 1;
             }
             input{
                 display: none;
@@ -53,6 +54,7 @@ header{
                 opacity: 0;
                 transition: 600ms all ease-out;
                 transform: translateY(20px);
+                z-index: -1;
                 .edge{
                     position: absolute;
                     width: 20px;
@@ -63,7 +65,7 @@ header{
                     top: -5px
                 }
                 .value{
-                    width: 400px;
+                    width: 350px;
                     background: white;
                     border-radius: 15px;
                     padding: 35px;
@@ -90,7 +92,8 @@ header{
                                 color:$text-blue;
                             }
                             .description{
-                                line-height: 25px;
+                                line-height: 20px;
+                                font-size: 15px;
                                 color: $text-grey;
                             }
                             
@@ -100,23 +103,85 @@ header{
             }
         }
     }
-    .buttons{
-        #login,#register{
-            border: 0;
-            font-weight: 600;
-            cursor: pointer;
-            font-family: unset;
-            border-radius: 5px;
-            padding: 15px 30px;
+}
+section.hero{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    .container{
+        .col:last-child{
+            width: 50%;
+            img{
+                width: 100%;
+            }
         }
-        #login{
-            background: transparent;
-            color: $text-grey;
-            padding: 15px 25px;
-        }
-        #register{
-            background: $focus-btn;
-            color: white;
+        .col:first-child{
+            padding-right: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            .header{
+                display: flex;
+                font-size: 4rem;
+                font-weight: 700;
+                line-height: 5rem;
+                margin-bottom: 20px;
+                p{
+                    color: $text-blue;
+                    span{
+                        color: $focus-text;
+                    }
+                }
+            }
+            .description{
+                color: $text-grey;
+                font-size: 16px;
+                font-weight: 500;
+                margin-bottom: 20px;
+                line-height: 23px;
+            }
+            .btn{
+                margin-bottom: 20px;
+                width: fit-content;
+            }
+            .rating{
+                color: $text-grey;
+                font-size: 16px;
+                font-weight: 500;
+                margin-bottom: 20px;
+                line-height: 23px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                .images{
+                    display: flex;
+                    flex-direction: row;
+                    margin-left: 15px;
+                    #AlternativeTo-logo{
+                        margin-left: 10px;
+                        margin-right: 10px;
+                    }
+                }
+            }
         }
     }
+}
+.btn-register{
+    background: $focus-btn;
+    color: white;
+    
+}
+.btn-login{
+    background: transparent;
+    color: $text-grey;
+    padding: 15px 25px;
+}
+.btn{
+    border: 0;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: unset;
+    border-radius: 5px;
+    padding: 15px 30px;
+
 }

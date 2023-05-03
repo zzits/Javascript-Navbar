@@ -52,6 +52,7 @@ header ul li #dropdown:checked ~ .dropdown {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
+  z-index: 1;
 }
 header ul li input {
   display: none;
@@ -72,6 +73,7 @@ header ul li .dropdown {
   transition: 600ms all ease-out;
   -webkit-transform: translateY(20px);
           transform: translateY(20px);
+  z-index: -1;
 }
 header ul li .dropdown .edge {
   position: absolute;
@@ -84,7 +86,7 @@ header ul li .dropdown .edge {
   top: -5px;
 }
 header ul li .dropdown .value {
-  width: 400px;
+  width: 350px;
   background: white;
   border-radius: 15px;
   padding: 35px;
@@ -124,23 +126,110 @@ header ul li .dropdown .value ul li .header {
   color: #0A263F;
 }
 header ul li .dropdown .value ul li .description {
-  line-height: 25px;
+  line-height: 20px;
+  font-size: 15px;
   color: #6C6C6C;
 }
-header .buttons #login, header .buttons #register {
+
+section.hero {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+section.hero .container .col:last-child {
+  width: 50%;
+}
+section.hero .container .col:last-child img {
+  width: 100%;
+}
+section.hero .container .col:first-child {
+  padding-right: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+section.hero .container .col:first-child .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 5rem;
+  margin-bottom: 20px;
+}
+section.hero .container .col:first-child .header p {
+  color: #0A263F;
+}
+section.hero .container .col:first-child .header p span {
+  color: #F7B300;
+}
+section.hero .container .col:first-child .description {
+  color: #6C6C6C;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  line-height: 23px;
+}
+section.hero .container .col:first-child .btn {
+  margin-bottom: 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+section.hero .container .col:first-child .rating {
+  color: #6C6C6C;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  line-height: 23px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+section.hero .container .col:first-child .rating .images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-left: 15px;
+}
+section.hero .container .col:first-child .rating .images #AlternativeTo-logo {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.btn-register {
+  background: #133416;
+  color: white;
+}
+
+.btn-login {
+  background: transparent;
+  color: #6C6C6C;
+  padding: 15px 25px;
+}
+
+.btn {
   border: 0;
   font-weight: 600;
   cursor: pointer;
   font-family: unset;
   border-radius: 5px;
   padding: 15px 30px;
-}
-header .buttons #login {
-  background: transparent;
-  color: #6C6C6C;
-  padding: 15px 25px;
-}
-header .buttons #register {
-  background: #133416;
-  color: white;
 }
