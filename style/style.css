@@ -45,18 +45,33 @@ header ul {
           justify-content: space-between;
 }
 header ul li {
+  position: relative;
   margin: 0 5px;
 }
-header ul li a {
+header ul li #dropdown:checked ~ .dropdown {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+header ul li input {
+  display: none;
+}
+header ul li label, header ul li a {
   color: #6C6C6C;
   letter-spacing: -1px;
   font-weight: 500;
   font-size: 15px;
+  cursor: pointer;
 }
 header ul li .dropdown {
   position: absolute;
-  top: 500px;
-  left: 500px;
+  top: 30px;
+  left: -80px;
+  opacity: 0;
+  -webkit-transition: 600ms all ease-out;
+  transition: 600ms all ease-out;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
 }
 header ul li .dropdown .edge {
   position: absolute;

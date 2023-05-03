@@ -30,17 +30,29 @@ header{
         flex-direction: row;
         justify-content: space-between;
         li{
+            position: relative;
             margin: 0 5px;
-            a{
+            #dropdown:checked~.dropdown {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            input{
+                display: none;
+            }
+            label,a{
                 color: $text-grey;
                 letter-spacing: -1px;
                 font-weight: 500;
                 font-size: 15px;
+                cursor: pointer;
             }
             .dropdown{
                 position: absolute;
-                top: 500px;
-                left: 500px;
+                top: 30px;
+                left: -80px;
+                opacity: 0;
+                transition: 600ms all ease-out;
+                transform: translateY(20px);
                 .edge{
                     position: absolute;
                     width: 20px;
