@@ -133,7 +133,7 @@ header ul li .dropdown .value ul li .description {
 
 section.hero {
   padding-top: 100px;
-  padding-bottom: 100px;
+  height: 79vh;
 }
 section.hero .container .col:last-child {
   width: 50%;
@@ -212,6 +212,33 @@ section.hero .container .col:first-child .rating .images {
 section.hero .container .col:first-child .rating .images #AlternativeTo-logo {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.section-companies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: 50px;
+}
+.section-companies .companies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.section-companies .companies li {
+  margin-right: 20px;
 }
 
 .btn-register {

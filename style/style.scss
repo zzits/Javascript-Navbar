@@ -106,7 +106,7 @@ header{
 }
 section.hero{
     padding-top: 100px;
-    padding-bottom: 100px;
+    height: 79vh;
     .container{
         .col:last-child{
             width: 50%;
@@ -163,6 +163,21 @@ section.hero{
                     }
                 }
             }
+        }
+    }
+}
+.section-companies{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 50px;
+    .companies{
+        display: flex;
+        width: 100%;
+        max-width: 1000px;
+        justify-content: space-between;
+        li{
+            margin-right: 20px;
         }
     }
 }
