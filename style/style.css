@@ -46,7 +46,7 @@ header ul {
 }
 header ul li {
   position: relative;
-  margin: 0 5px;
+  margin: 5px 5px;
 }
 header ul li #dropdown:checked ~ .dropdown {
   opacity: 1;
@@ -139,7 +139,8 @@ section.hero .container .col:last-child {
   width: 50%;
 }
 section.hero .container .col:last-child img {
-  width: 100%;
+  width: 80%;
+  min-width: 340px;
 }
 section.hero .container .col:first-child {
   padding-right: 100px;
@@ -225,7 +226,11 @@ section.hero .container .col:first-child .rating .images #AlternativeTo-logo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  bottom: 50px;
+  margin-top: 5%;
+}
+.section-companies .undertext {
+  margin-bottom: 30px;
+  color: #6C6C6C;
 }
 .section-companies .companies {
   display: -webkit-box;

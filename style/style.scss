@@ -31,7 +31,7 @@ header{
         justify-content: space-between;
         li{
             position: relative;
-            margin: 0 5px;
+            margin: 5px 5px;
             #dropdown:checked~.dropdown {
                 opacity: 1;
                 transform: translateY(0);
@@ -111,7 +111,8 @@ section.hero{
         .col:last-child{
             width: 50%;
             img{
-                width: 100%;
+                width: 80%;
+                min-width: 340px;
             }
         }
         .col:first-child{
@@ -170,7 +171,11 @@ section.hero{
     display:flex;
     flex-direction: column;
     align-items: center;
-    bottom: 50px;
+    margin-top: 5%;
+    .undertext{
+        margin-bottom: 30px;
+        color: $text-grey;
+    }
     .companies{
         display: flex;
         width: 100%;
