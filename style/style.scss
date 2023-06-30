@@ -103,10 +103,22 @@ header{
             }
         }
     }
+    .buttons{
+        #hamburger-btn {
+            display: none;
+            cursor: pointer;
+        }
+        #hamburger{
+            display: none;
+        }
+    }
 }
 section.hero{
     padding-top: 100px;
     height: 79vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     .container{
         .col:last-child{
             width: 50%;
@@ -171,7 +183,7 @@ section.hero{
     display:flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 5%;
+    margin-bottom: 100px;
     .undertext{
         margin-bottom: 30px;
         color: $text-grey;
@@ -204,4 +216,29 @@ section.hero{
     border-radius: 5px;
     padding: 15px 30px;
 
+}
+@media screen and (max-width:1080px){
+section.hero{
+    .container{
+        .col:last-child{
+            display: none;
+        }
+        .col:first-child{
+            padding: 0;
+        }
+    }
+}
+header{
+    nav{
+        display: none;
+    }
+    .buttons{
+        .btn{
+            display: none;
+        }
+        #hamburger-btn{
+            display: block;
+        }
+    }
+}
 }

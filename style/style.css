@@ -130,10 +130,27 @@ header ul li .dropdown .value ul li .description {
   font-size: 15px;
   color: #6C6C6C;
 }
+header .buttons #hamburger-btn {
+  display: none;
+  cursor: pointer;
+}
+header .buttons #hamburger {
+  display: none;
+}
 
 section.hero {
   padding-top: 100px;
   height: 79vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 section.hero .container .col:last-child {
   width: 50%;
@@ -226,7 +243,7 @@ section.hero .container .col:first-child .rating .images #AlternativeTo-logo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 5%;
+  margin-bottom: 100px;
 }
 .section-companies .undertext {
   margin-bottom: 30px;
@@ -264,4 +281,22 @@ section.hero .container .col:first-child .rating .images #AlternativeTo-logo {
   font-family: unset;
   border-radius: 5px;
   padding: 15px 30px;
+}
+
+@media screen and (max-width: 1080px) {
+  section.hero .container .col:last-child {
+    display: none;
+  }
+  section.hero .container .col:first-child {
+    padding: 0;
+  }
+  header nav {
+    display: none;
+  }
+  header .buttons .btn {
+    display: none;
+  }
+  header .buttons #hamburger-btn {
+    display: block;
+  }
 }
