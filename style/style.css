@@ -248,6 +248,7 @@ section.hero .container .col:first-child .rating .images #AlternativeTo-logo {
 .section-companies .undertext {
   margin-bottom: 30px;
   color: #6C6C6C;
+  text-align: center;
 }
 .section-companies .companies {
   display: -webkit-box;
@@ -255,9 +256,26 @@ section.hero .container .col:first-child .rating .images #AlternativeTo-logo {
   display: flex;
   width: 100%;
   max-width: 1000px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 20px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media screen and (max-width: 890px) {
+  .section-companies .companies {
+    max-width: 630px;
+  }
+  .section-companies .companies .shopify-logo, .section-companies .companies .walmart-logo {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 890px) and (max-width: 465px) {
+  .section-companies .companies img {
+    max-width: 150px;
+  }
 }
 .section-companies .companies li {
   margin-right: 20px;

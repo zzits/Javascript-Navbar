@@ -187,12 +187,27 @@ section.hero{
     .undertext{
         margin-bottom: 30px;
         color: $text-grey;
+        text-align: center;
     }
     .companies{
         display: flex;
         width: 100%;
         max-width: 1000px;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0 20px;
+        justify-content: space-around;
+        box-sizing: border-box;
+        @media screen and (max-width:890px) {
+            max-width: 630px;
+            .shopify-logo,.walmart-logo{
+                margin: 0;
+            }
+            @media screen and (max-width:465px) {
+                img{
+                    max-width: 150px;
+                }
+            }
+        }
         li{
             margin-right: 20px;
         }
