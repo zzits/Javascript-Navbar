@@ -47,60 +47,7 @@ header{
                 font-size: 15px;
                 cursor: pointer;
             }
-            .dropdown{
-                position: absolute;
-                top: 30px;
-                left: -80px;
-                opacity: 0;
-                transition: 600ms all ease-out;
-                transform: translateY(20px);
-                z-index: -1;
-                .edge{
-                    position: absolute;
-                    width: 20px;
-                    height: 20px;
-                    background-color: white;
-                    transform: rotate(45deg);
-                    left: 100px;
-                    top: -5px
-                }
-                .value{
-                    width: 350px;
-                    background: white;
-                    border-radius: 15px;
-                    padding: 35px;
-                    padding-left: 75px;
-                    ul{
-                        display: flex;
-                        flex-direction: column;
-                        li{
-                            margin: 0;
-                            display: flex;
-                            margin-bottom: 15px;
-                            &:last-child{
-                                margin-bottom: 0;
-                            }
-                            .logo{
-                                margin-right: 10px;
-                                
-                            }
-                            .header{
-                                display: flex;
-                                align-items: center;
-                                margin-left: -40px;
-                                font-weight: 700;
-                                color:$text-blue;
-                            }
-                            .description{
-                                line-height: 20px;
-                                font-size: 15px;
-                                color: $text-grey;
-                            }
-                            
-                        }
-                    }
-                }
-            }
+            
         }
     }
     .buttons{
@@ -111,10 +58,49 @@ header{
         #hamburger{
             display: none;
         }
+        #hamburger:checked~.dropdown {
+            opacity: 1;
+            transform: translateY(0);
+            z-index: 1;
+        }
+        .dropdown{
+            top: 30px;
+            left: 0px;
+            margin-left: 20px;
+            margin-right: 20px;
+            .value{
+                width: auto;
+            }
+        }
+        .head-line{
+            margin-left: -45px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: $text-grey;
+            font-weight: 600;
+            label{
+                height: 24px;
+                cursor: pointer;
+            }
+            margin-bottom: 20px;
+        }
     }
 }
 section.hero{
     padding-top: 100px;
+    @media screen and (max-width:890px) {
+        padding-top:20px;
+        .header p{
+            line-height: 65px;
+        }
+        @media screen and (max-width:500px) {
+            .header{
+                font-size: 3rem !important;
+                p{line-height: 55px !important;}
+            }
+        }
+    }
     height: 79vh;
     display: flex;
     flex-direction: column;
@@ -256,4 +242,66 @@ header{
         }
     }
 }
+}
+.dropdown {
+    position: absolute;
+    top: 30px;
+    left: -80px;
+    opacity: 0;
+    transition: 600ms all ease-out;
+    transform: translateY(20px);
+    z-index: -1;
+
+    .edge {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        transform: rotate(45deg);
+        left: 100px;
+        top: -5px
+    }
+
+    .value {
+        width: 350px;
+        background: white;
+        border-radius: 15px;
+        padding: 35px;
+        padding-left: 75px;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+
+            li {
+                margin: 0;
+                display: flex;
+                margin-bottom: 15px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                .logo {
+                    margin-right: 10px;
+
+                }
+
+                .header {
+                    display: flex;
+                    align-items: center;
+                    margin-left: -40px;
+                    font-weight: 700;
+                    color: $text-blue;
+                }
+
+                .description {
+                    line-height: 20px;
+                    font-size: 15px;
+                    color: $text-grey;
+                }
+
+            }
+        }
+    }
 }
